@@ -46,11 +46,24 @@ const capabilities = [
   { icon: Palette, title: "Product Design", desc: "Research-driven UX, design systems and rapid prototyping.", tint: "from-magenta to-violet" },
 ];
 
-const metrics = [
-  { value: 100, suffix: "+", label: "Projects delivered" },
-  { value: 10, suffix: "+", label: "Years of engineering" },
-  { value: 95, suffix: "%", label: "Client retention" },
-  { value: 24, suffix: "/7", label: "Always-on support" },
+const trustPillars = [
+  {
+    headline: "16+",
+    sub: "yrs",
+    label: "Combined engineering experience across the founding team.",
+  },
+  {
+    headline: "Senior-led",
+    label: "Every engagement is led and built by senior engineers — no offshoring layers.",
+  },
+  {
+    headline: "1 business day",
+    label: "Typical response time on project inquiries, with a concrete next step.",
+  },
+  {
+    headline: "Hyderabad, India",
+    label: "Headquartered in Telangana · delivering for clients across India and abroad.",
+  },
 ];
 
 const reasons = [
