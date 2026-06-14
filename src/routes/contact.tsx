@@ -157,7 +157,7 @@ function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.1} className="lg:col-span-5 space-y-4">
-            <ContactCard icon={Mail} label="Email" value={SITE.email} sub={SITE.emailAlt} href={`mailto:${SITE.email}`} />
+            <ContactCard icon={Mail} label="Email" value={SITE.email} sub="Replies within one business day" href={`mailto:${SITE.email}`} />
             <ContactCard icon={Phone} label="Phone" value={SITE.phone} sub="Mon – Sat, business hours" href={SITE.phoneHref} />
             <ContactCard
               icon={MapPin}
