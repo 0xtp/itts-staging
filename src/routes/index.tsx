@@ -210,7 +210,7 @@ function HomePage() {
 
 
       {/* CAPABILITIES */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Core capabilities</div>
@@ -239,7 +239,7 @@ function HomePage() {
       </section>
 
       {/* FEATURED WORK */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
@@ -283,7 +283,7 @@ function HomePage() {
       </section>
 
       {/* WHY ITTS */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
@@ -309,7 +309,7 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <div className="relative overflow-hidden rounded-[2rem] glass-strong p-10 sm:p-16 ring-glow">

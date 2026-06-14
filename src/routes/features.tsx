@@ -142,7 +142,7 @@ function FeaturesPage() {
       ))}
 
       {/* TIMELINE */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Engagement model</div>
@@ -179,7 +179,7 @@ function FeaturesPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="glass-strong rounded-[2rem] p-10 sm:p-16 ring-glow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>

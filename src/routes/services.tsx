@@ -190,7 +190,7 @@ function ServicesPage() {
       </div>
 
       {/* CTA */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="glass-strong rounded-[2rem] p-10 sm:p-16 ring-glow text-center">
             <h3 className="font-display text-4xl sm:text-5xl font-black tracking-tight max-w-3xl mx-auto">

@@ -171,7 +171,7 @@ function ContactPage() {
       </section>
 
       {/* ENGAGEMENT MODELS */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Engagement Models</div>
@@ -194,7 +194,7 @@ function ContactPage() {
       </section>
 
       {/* MAP */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <div className="relative overflow-hidden rounded-3xl glass-strong h-96 ring-glow">
