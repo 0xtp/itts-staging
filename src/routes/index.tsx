@@ -15,7 +15,6 @@ import {
   Handshake,
 } from "lucide-react";
 import { HeroVisual } from "@/components/site/HeroVisual";
-import { Counter } from "@/components/site/Counter";
 import { Reveal, Stagger, item } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
