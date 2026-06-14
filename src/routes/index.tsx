@@ -113,7 +113,7 @@ function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.15 }}
-                className="mt-7 max-w-2xl text-lg sm:text-xl text-muted-foreground text-balance"
+                className="mt-6 max-w-2xl text-base sm:text-xl text-muted-foreground text-balance"
               >
                 ITTS builds scalable software platforms, mobile applications, AI-powered solutions,
                 cloud infrastructure and enterprise systems for ambitious businesses.
