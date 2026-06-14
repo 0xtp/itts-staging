@@ -84,8 +84,8 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-10 sm:pt-16 pb-24 lg:pb-32">
-          <div className="grid gap-14 lg:grid-cols-12 lg:gap-10 items-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-8 sm:pt-16 pb-16 sm:pb-24 lg:pb-32">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-10 items-center">
             <div className="lg:col-span-7">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -103,7 +103,7 @@ function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.05 }}
-                className="mt-6 font-display text-[2.6rem] sm:text-6xl lg:text-[5rem] leading-[1.02] font-black tracking-tight"
+                className="mt-6 font-display text-[2.1rem] sm:text-5xl md:text-6xl lg:text-[5rem] leading-[1.05] font-black tracking-tight"
               >
                 Engineering technology that{" "}
                 <span className="text-gradient">accelerates business growth</span>
@@ -113,7 +113,7 @@ function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.15 }}
-                className="mt-7 max-w-2xl text-lg sm:text-xl text-muted-foreground text-balance"
+                className="mt-6 max-w-2xl text-base sm:text-xl text-muted-foreground text-balance"
               >
                 ITTS builds scalable software platforms, mobile applications, AI-powered solutions,
                 cloud infrastructure and enterprise systems for ambitious businesses.
@@ -155,7 +155,7 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5">
+            <div className="hidden md:block lg:col-span-5">
               <HeroVisual />
             </div>
           </div>
@@ -181,26 +181,26 @@ function HomePage() {
             </p>
           </Reveal>
 
-          <Stagger className="grid gap-px overflow-hidden rounded-3xl glass-strong ring-glow sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl glass-strong ring-glow lg:grid-cols-4">
             {stats.map((s) => (
               <motion.div
                 variants={item}
                 key={s.title}
-                className="relative bg-background/40 px-7 py-8 hover:bg-white/[0.03] transition"
+                className="relative bg-background/40 px-4 sm:px-7 py-6 sm:py-8 hover:bg-white/[0.03] transition"
               >
                 <div className="flex items-baseline gap-1.5">
-                  <span className="font-display text-5xl sm:text-6xl font-black text-gradient tabular-nums leading-none">
+                  <span className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-gradient tabular-nums leading-none">
                     {s.value}
                   </span>
-                  <span className="font-display text-base sm:text-lg font-bold text-foreground/70 tabular-nums">
+                  <span className="font-display text-sm sm:text-base lg:text-lg font-bold text-foreground/70 tabular-nums">
                     {s.unit}
                   </span>
                 </div>
-                <div className="mt-5 h-px w-10 bg-gradient-to-r from-violet/70 to-transparent" />
-                <div className="mt-5 font-display text-[15px] font-bold text-foreground">
+                <div className="mt-4 h-px w-10 bg-gradient-to-r from-violet/70 to-transparent" />
+                <div className="mt-4 font-display text-sm sm:text-[15px] font-bold text-foreground">
                   {s.title}
                 </div>
-                <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
               </motion.div>
             ))}
           </Stagger>
@@ -210,7 +210,7 @@ function HomePage() {
 
 
       {/* CAPABILITIES */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Core capabilities</div>
@@ -239,7 +239,7 @@ function HomePage() {
       </section>
 
       {/* FEATURED WORK */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
@@ -283,7 +283,7 @@ function HomePage() {
       </section>
 
       {/* WHY ITTS */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
@@ -309,7 +309,7 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <div className="relative overflow-hidden rounded-[2rem] glass-strong p-10 sm:p-16 ring-glow">

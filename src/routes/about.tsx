@@ -42,10 +42,10 @@ function AboutPage() {
     <>
       {/* HERO */}
       <section className="relative">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-24">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">About ITTS</div>
-            <h1 className="mt-4 font-display text-5xl sm:text-7xl lg:text-[6.5rem] font-black tracking-tight leading-[1.02] max-w-5xl">
+            <h1 className="mt-4 font-display text-[2.25rem] sm:text-6xl md:text-7xl lg:text-[6rem] font-black tracking-tight leading-[1.02] max-w-5xl">
               Building digital solutions <span className="text-gradient">with trust.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg sm:text-xl text-muted-foreground">
@@ -86,7 +86,7 @@ function AboutPage() {
       </section>
 
       {/* MISSION / VISION */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-6">
           <Reveal>
             <div className="glass-strong rounded-3xl p-10 h-full ring-glow">
@@ -108,7 +108,7 @@ function AboutPage() {
       </section>
 
       {/* VALUES */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Core Values</div>
@@ -131,7 +131,7 @@ function AboutPage() {
       </section>
 
       {/* CULTURE */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5">
@@ -162,7 +162,7 @@ function AboutPage() {
       </section>
 
       {/* TECH ECOSYSTEM */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Technology Ecosystem</div>
@@ -188,7 +188,7 @@ function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative mt-32">
+      <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="glass-strong rounded-[2rem] p-10 sm:p-16 ring-glow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <h3 className="font-display text-3xl sm:text-4xl font-black max-w-2xl">
