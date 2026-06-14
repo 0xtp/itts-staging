@@ -186,21 +186,21 @@ function HomePage() {
               <motion.div
                 variants={item}
                 key={s.title}
-                className="relative bg-background/40 px-7 py-8 hover:bg-white/[0.03] transition"
+                className="relative bg-background/40 px-4 sm:px-7 py-6 sm:py-8 hover:bg-white/[0.03] transition"
               >
                 <div className="flex items-baseline gap-1.5">
-                  <span className="font-display text-5xl sm:text-6xl font-black text-gradient tabular-nums leading-none">
+                  <span className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-gradient tabular-nums leading-none">
                     {s.value}
                   </span>
-                  <span className="font-display text-base sm:text-lg font-bold text-foreground/70 tabular-nums">
+                  <span className="font-display text-sm sm:text-base lg:text-lg font-bold text-foreground/70 tabular-nums">
                     {s.unit}
                   </span>
                 </div>
-                <div className="mt-5 h-px w-10 bg-gradient-to-r from-violet/70 to-transparent" />
-                <div className="mt-5 font-display text-[15px] font-bold text-foreground">
+                <div className="mt-4 h-px w-10 bg-gradient-to-r from-violet/70 to-transparent" />
+                <div className="mt-4 font-display text-sm sm:text-[15px] font-bold text-foreground">
                   {s.title}
                 </div>
-                <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
               </motion.div>
             ))}
           </Stagger>
