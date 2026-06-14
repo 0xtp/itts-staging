@@ -75,11 +75,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/5 pt-8 text-xs text-muted-foreground">
+        <div className="mt-16 flex flex-col gap-4 border-t border-white/5 pt-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} I Trust Techno Solutions. All rights reserved.</div>
-          <div className="flex items-center gap-2">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            All systems operational
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <a href="/logo.svg" download className="hover:text-foreground transition">Download logo</a>
+            <a href="/logo-mark.svg" download className="hover:text-foreground transition">Logo mark</a>
+            <a href="/favicon.svg" download className="hover:text-foreground transition">Favicon</a>
+            <span className="inline-flex items-center gap-2">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              All systems operational
+            </span>
           </div>
         </div>
       </div>
