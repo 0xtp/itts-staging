@@ -320,23 +320,32 @@ function ContactCard({
   label,
   value,
   sub,
+  href,
 }: {
   icon: typeof Mail;
   label: string;
   value: string;
   sub?: string;
+  href?: string;
 }) {
-  return (
-    <div className="glass rounded-2xl p-6 flex gap-4">
+  const inner = (
+    <div className="glass rounded-2xl p-6 flex gap-4 hover:bg-white/[0.06] transition">
       <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet to-magenta ring-1 ring-white/15">
         <Icon className="h-5 w-5 text-white" />
       </div>
       <div className="min-w-0">
         <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{label}</div>
-        <div className="mt-1 font-display font-bold truncate">{value}</div>
-        {sub && <div className="mt-0.5 text-xs text-muted-foreground">{sub}</div>}
+        <div className="mt-1 font-display font-bold break-words">{value}</div>
+        {sub && <div className="mt-0.5 text-xs text-muted-foreground break-words">{sub}</div>}
       </div>
     </div>
+  );
+  return href ? (
+    <a href={href} className="block">
+      {inner}
+    </a>
+  ) : (
+    inner
   );
 }
 
