@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" width="320" height="96" role="img" aria-label="I Trust Techno Solutions">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7CD6FF"/>
+      <stop offset="50%" stop-color="#A879FF"/>
+      <stop offset="100%" stop-color="#FF6EC7"/>
+    </linearGradient>
+    <linearGradient id="gradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7CD6FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#A879FF" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <!-- hex monogram mark -->
+  <g transform="translate(8 8)">
+    <polygon points="40,2 76,22 76,58 40,78 4,58 4,22" fill="url(#grad)"/>
+    <polygon points="40,7 71,25 71,55 40,73 9,55 9,25" fill="#0B0B14"/>
+    <!-- 'iT' monogram -->
+    <g fill="#FFFFFF">
+      <!-- i -->
+      <circle cx="28" cy="28" r="3.6"/>
+      <rect x="24.8" y="35" width="6.6" height="24" rx="3.3"/>
+      <!-- T -->
+      <rect x="36" y="33" width="22" height="6.4" rx="3.2" fill="url(#gradSoft)"/>
+      <rect x="44" y="33" width="6.4" height="26" rx="3.2" fill="url(#gradSoft)"/>
+    </g>
+  </g>
+  <!-- wordmark -->
+  <g font-family="Inter, -apple-system, Segoe UI, sans-serif">
+    <text x="100" y="50" font-size="22" font-weight="900" fill="#F4F4F8" letter-spacing="-0.6">ITTS</text>
+    <text x="100" y="70" font-size="9" letter-spacing="3.6" fill="#9AA0B4" font-weight="600">I TRUST TECHNO SOLUTIONS</text>
+  </g>
+</svg>
