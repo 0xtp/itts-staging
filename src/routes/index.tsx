@@ -84,26 +84,26 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-8 sm:pt-16 pb-16 sm:pb-24 lg:pb-32">
+        <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 pt-6 sm:pt-16 pb-14 sm:pb-24 lg:pb-32">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-10 items-center">
             <div className="lg:col-span-7">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs"
+                className="inline-flex max-w-full items-center gap-2 rounded-full glass px-3 py-1.5 text-[11px] sm:text-xs"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-muted-foreground">Now booking new engagements</span>
-                <span className="text-foreground/40">·</span>
-                <span className="text-foreground/80">Hyderabad · Remote-friendly</span>
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="truncate text-muted-foreground">Now booking new engagements</span>
+                <span className="hidden sm:inline text-foreground/40">·</span>
+                <span className="hidden sm:inline text-foreground/80">Hyderabad · Remote-friendly</span>
               </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.05 }}
-                className="mt-6 font-display text-[2.1rem] sm:text-5xl md:text-6xl lg:text-[5rem] leading-[1.05] font-black tracking-tight"
+                className="mt-5 sm:mt-6 font-display text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] leading-[1.08] sm:leading-[1.04] font-black tracking-tight break-words"
               >
                 Engineering technology that{" "}
                 <span className="text-gradient">accelerates business growth</span>
@@ -113,9 +113,9 @@ function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.15 }}
-                className="mt-6 max-w-2xl text-base sm:text-xl text-muted-foreground text-balance"
+                className="mt-5 sm:mt-6 max-w-2xl text-base sm:text-xl text-muted-foreground"
               >
-                ITTS builds scalable software platforms, mobile applications, AI-powered solutions,
+                ITTS builds scalable software platforms, mobile apps, AI-powered solutions,
                 cloud infrastructure and enterprise systems for ambitious businesses.
               </motion.p>
 
@@ -123,18 +123,18 @@ function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.25 }}
-                className="mt-9 flex flex-wrap items-center gap-3"
+                className="mt-7 sm:mt-9 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3"
               >
                 <Link
                   to="/contact"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet to-magenta px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 shadow-[0_14px_40px_-12px_oklch(0.72_0.21_295_/_0.75)] hover:shadow-[0_20px_50px_-10px_oklch(0.72_0.21_295_/_0.95)] transition"
+                  className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet to-magenta px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 shadow-[0_14px_40px_-12px_oklch(0.72_0.21_295_/_0.75)] hover:shadow-[0_20px_50px_-10px_oklch(0.72_0.21_295_/_0.95)] transition"
                 >
                   Start your project
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 rounded-xl glass px-5 py-3 text-sm font-medium hover:bg-white/10 transition"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl glass px-5 py-3 text-sm font-medium hover:bg-white/10 transition"
                 >
                   View services
                   <ArrowUpRight className="h-4 w-4" />
@@ -142,12 +142,12 @@ function HomePage() {
               </motion.div>
 
               {/* tech marquee */}
-              <div className="mt-12 relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-                <div className="flex gap-10 animate-marquee w-max text-xs uppercase tracking-[0.2em] text-muted-foreground/80">
+              <div className="mt-10 sm:mt-12 relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+                <div className="flex gap-8 sm:gap-10 animate-marquee w-max text-[10px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.2em] text-muted-foreground/80">
                   {[...Array(2)].map((_, k) => (
-                    <div key={k} className="flex gap-10 pr-10">
+                    <div key={k} className="flex gap-8 sm:gap-10 pr-8 sm:pr-10">
                       {["React", "Next.js", "Node", "AWS", "Azure", ".NET", "Python", "PostgreSQL", "Solidity", "Apache Cordova", "React Native", "Kubernetes"].map((t) => (
-                        <span key={t + k}>{t}</span>
+                        <span key={t + k} className="whitespace-nowrap">{t}</span>
                       ))}
                     </div>
                   ))}
