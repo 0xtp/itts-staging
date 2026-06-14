@@ -165,7 +165,7 @@ function ContactPage() {
               value={SITE.address.line1}
               sub={`${SITE.address.line2} · ${SITE.address.line3}`}
             />
-            <ContactCard icon={Clock} label="Hours" value={SITE.hours} sub="24/7 support for active engagements" />
+            <ContactCard icon={Clock} label="Hours" value={SITE.hours} sub="Priority support windows for active engagements" />
           </Reveal>
         </div>
       </section>
