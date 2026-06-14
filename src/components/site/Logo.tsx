@@ -1,38 +1,44 @@
 type Props = { className?: string; showWordmark?: boolean };
 
+// ITTS "Ascend" mark — upward chevron + dot in a gradient-bordered rounded square.
+// A clean, modern mark signalling trust (solid frame), growth (chevron),
+// and precision (single dot keystone).
 export function Logo({ className = "", showWordmark = true }: Props) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <span className="relative inline-flex h-10 w-10 items-center justify-center">
-        <span className="absolute inset-0 rounded-[12px] bg-gradient-to-br from-violet via-magenta to-cyan opacity-90" />
-        <span className="absolute inset-[1.5px] rounded-[10.5px] bg-background" />
         <svg
-          viewBox="0 0 40 40"
-          className="relative h-6 w-6"
+          viewBox="0 0 48 48"
+          className="h-10 w-10"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden
         >
           <defs>
-            <linearGradient id="ittsLogoA" x1="0" y1="0" x2="1" y2="1">
+            <linearGradient id="ittsRing" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="oklch(0.82 0.16 220)" />
-              <stop offset="100%" stopColor="oklch(0.72 0.21 295)" />
+              <stop offset="50%" stopColor="oklch(0.72 0.21 295)" />
+              <stop offset="100%" stopColor="oklch(0.7 0.24 340)" />
             </linearGradient>
-            <linearGradient id="ittsLogoB" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="oklch(0.7 0.24 340)" />
-              <stop offset="100%" stopColor="oklch(0.72 0.21 295)" />
+            <linearGradient id="ittsStroke" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0%" stopColor="oklch(0.82 0.16 220)" />
+              <stop offset="100%" stopColor="oklch(0.7 0.24 340)" />
             </linearGradient>
           </defs>
-          {/* Stylized 'i' dot + ascending bars forming a 'T' implication */}
-          <circle cx="9" cy="8" r="3" fill="url(#ittsLogoA)" />
-          <rect x="6.5" y="14" width="5" height="20" rx="2.5" fill="url(#ittsLogoA)" />
-          <rect x="15" y="20" width="5" height="14" rx="2.5" fill="url(#ittsLogoB)" />
-          <rect x="23.5" y="14" width="5" height="20" rx="2.5" fill="url(#ittsLogoB)" />
+          {/* gradient frame */}
+          <rect x="1.25" y="1.25" width="45.5" height="45.5" rx="13" stroke="url(#ittsRing)" strokeWidth="2.5" />
+          {/* dot */}
+          <circle cx="24" cy="11.5" r="2.6" fill="url(#ittsStroke)" />
+          {/* upward chevron */}
           <path
-            d="M32 6 L34 10 L38 12 L34 14 L32 18 L30 14 L26 12 L30 10 Z"
-            fill="oklch(0.99 0 0)"
-            opacity="0.95"
+            d="M11 34 L24 19 L37 34"
+            stroke="url(#ittsStroke)"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
+          {/* baseline tick */}
+          <path d="M15 40.5 L33 40.5" stroke="url(#ittsStroke)" strokeWidth="2" strokeLinecap="round" opacity="0.55" />
         </svg>
       </span>
       {showWordmark && (

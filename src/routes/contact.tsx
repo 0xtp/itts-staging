@@ -193,20 +193,60 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* MAP */}
+      {/* VISIT US */}
       <section className="relative mt-20 sm:mt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <Reveal>
-            <div className="relative overflow-hidden rounded-3xl glass-strong h-96 ring-glow">
-              <MapBackdrop />
-              <div className="absolute inset-0 flex items-end p-8">
-                <div className="glass-strong rounded-2xl p-5 max-w-sm">
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-cyan">Headquarters</div>
-                  <div className="mt-2 font-display text-xl font-bold">Hyderabad, India</div>
-                  <p className="mt-1.5 text-sm text-muted-foreground">
-                    Building from Telangana for clients across India and abroad. Remote-friendly delivery.
-                  </p>
+          <Reveal className="grid lg:grid-cols-12 gap-6">
+            <div className="lg:col-span-5 glass-strong rounded-3xl p-8 ring-glow flex flex-col">
+              <div className="text-[10px] uppercase tracking-[0.2em] text-cyan">Visit us</div>
+              <h3 className="mt-3 font-display text-2xl sm:text-3xl font-black tracking-tight">
+                Our Hyderabad office
+              </h3>
+              <div className="mt-6 space-y-4 text-sm">
+                <div className="flex gap-3">
+                  <MapPin className="h-4 w-4 mt-0.5 text-cyan shrink-0" />
+                  <div className="text-muted-foreground">
+                    <div className="text-foreground">{SITE.address.line1}</div>
+                    <div>{SITE.address.line2}</div>
+                    <div>{SITE.address.line3}</div>
+                    <div>{SITE.address.region}</div>
+                  </div>
                 </div>
+                <div className="flex gap-3">
+                  <Clock className="h-4 w-4 mt-0.5 text-cyan shrink-0" />
+                  <span className="text-muted-foreground">{SITE.hours}</span>
+                </div>
+                <div className="flex gap-3">
+                  <Phone className="h-4 w-4 mt-0.5 text-cyan shrink-0" />
+                  <a href={SITE.phoneHref} className="text-muted-foreground hover:text-foreground">
+                    {SITE.phone}
+                  </a>
+                </div>
+              </div>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                  `${SITE.address.line1}, ${SITE.address.line2}, ${SITE.address.line3}`,
+                )}`}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex items-center gap-2 self-start rounded-xl bg-gradient-to-r from-violet to-magenta px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20"
+              >
+                Get directions <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+            <div className="lg:col-span-7">
+              <div className="relative overflow-hidden rounded-3xl glass-strong ring-glow h-80 sm:h-[28rem]">
+                <iframe
+                  title="ITTS office on Google Maps"
+                  src={`https://www.google.com/maps?q=${encodeURIComponent(
+                    `${SITE.address.line1}, ${SITE.address.line2}, ${SITE.address.line3}`,
+                  )}&output=embed`}
+                  className="absolute inset-0 h-full w-full grayscale-[0.2] contrast-110"
+                  style={{ filter: "invert(0.92) hue-rotate(180deg) saturate(0.8)", border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl" />
               </div>
             </div>
           </Reveal>
@@ -349,46 +389,3 @@ function ContactCard({
   );
 }
 
-function MapBackdrop() {
-  return (
-    <svg viewBox="0 0 800 360" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <radialGradient id="mapBg" cx="50%" cy="50%" r="60%">
-          <stop offset="0%" stopColor="oklch(0.72 0.21 295 / 0.25)" />
-          <stop offset="100%" stopColor="transparent" />
-        </radialGradient>
-        <linearGradient id="dot" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stopColor="oklch(0.82 0.16 220)" />
-          <stop offset="100%" stopColor="oklch(0.72 0.21 295)" />
-        </linearGradient>
-      </defs>
-      <rect width="800" height="360" fill="url(#mapBg)" />
-      {/* dotted world */}
-      {Array.from({ length: 36 }).map((_, r) =>
-        Array.from({ length: 80 }).map((_, c) => {
-          const x = c * 10 + 5;
-          const y = r * 10 + 5;
-          // crude continental mask
-          const inside =
-            (x > 60 && x < 230 && y > 70 && y < 230) ||
-            (x > 300 && x < 460 && y > 80 && y < 220) ||
-            (x > 500 && x < 720 && y > 90 && y < 240);
-          if (!inside) return null;
-          return <circle key={`${r}-${c}`} cx={x} cy={y} r="1.2" fill="oklch(1 0 0 / 0.18)" />;
-        }),
-      )}
-      {/* connecting beams */}
-      {[
-        [150, 160, 380, 150],
-        [380, 150, 620, 170],
-        [620, 170, 150, 160],
-      ].map(([x1, y1, x2, y2], i) => (
-        <g key={i}>
-          <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="url(#dot)" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.6" />
-          <circle cx={x1} cy={y1} r="4" fill="url(#dot)" />
-          <circle cx={x1} cy={y1} r="9" fill="oklch(0.72 0.21 295 / 0.25)" />
-        </g>
-      ))}
-    </svg>
-  );
-}
