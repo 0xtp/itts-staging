@@ -219,10 +219,13 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Featured work</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">What we build</div>
               <h2 className="mt-4 font-display text-4xl sm:text-5xl font-black tracking-tight max-w-2xl">
-                Selected platforms shipped with our partners.
+                The kind of platforms we engineer with our partners.
               </h2>
+              <p className="mt-4 max-w-xl text-sm text-muted-foreground">
+                Illustrative reference architectures based on real work — published case studies coming soon.
+              </p>
             </div>
             <Link to="/services" className="text-sm text-foreground/80 hover:text-foreground inline-flex items-center gap-1">
               All services <ArrowUpRight className="h-4 w-4" />
@@ -232,22 +235,22 @@ function HomePage() {
           <Stagger className="mt-12 grid gap-6 lg:grid-cols-3">
             <CaseCard
               tag="Enterprise · SaaS"
-              title="Enterprise Portal"
-              desc="Unified ops portal for a Fortune 500 retailer — 14 systems, one interface."
+              title="Operations Portal"
+              desc="Unified internal portal that consolidates fragmented back-office tools into one secure interface."
               gradient="from-violet/40 via-magenta/30 to-transparent"
               mock={<PortalMock />}
             />
             <CaseCard
               tag="Fintech"
-              title="Fintech Platform"
-              desc="Regulated payments and ledgering platform processing $2.4B annually."
+              title="Payments & Ledger"
+              desc="Compliance-aware payments and double-entry ledger services, built for audit and scale."
               gradient="from-cyan/40 via-violet/30 to-transparent"
               mock={<FintechMock />}
             />
             <CaseCard
               tag="AI · Operations"
-              title="AI Operations Dashboard"
-              desc="LLM-powered observability copilot reducing MTTR by 62%."
+              title="AI Operations Copilot"
+              desc="LLM-powered assistant that reads logs and metrics to help on-call engineers triage incidents faster."
               gradient="from-magenta/40 via-cyan/30 to-transparent"
               mock={<AIMock />}
             />
