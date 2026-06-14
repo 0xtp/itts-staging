@@ -224,7 +224,7 @@ function ContactPage() {
               30 minutes. No deck. Sharp questions, honest answers, and a recommendation either way.
             </p>
             <a
-              href="mailto:hello@itts.com"
+              href={`mailto:${SITE.email}`}
               className="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet to-magenta px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/20"
             >
               Reserve a slot <ArrowRight className="h-4 w-4" />
