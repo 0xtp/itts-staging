@@ -84,9 +84,9 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 pt-6 sm:pt-16 pb-14 sm:pb-24 lg:pb-32">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 pt-6 sm:pt-16 pb-14 sm:pb-24 lg:pb-32">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-10 items-center">
-            <div className="lg:col-span-7">
+            <div className="min-w-0 lg:col-span-7">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.05 }}
-                className="mt-5 sm:mt-6 font-display text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] leading-[1.08] sm:leading-[1.04] font-black tracking-tight break-words"
+                className="mt-5 sm:mt-6 font-display text-[2rem] xs:text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] leading-[1.1] sm:leading-[1.04] font-black tracking-tight [overflow-wrap:anywhere]"
               >
                 Engineering technology that{" "}
                 <span className="text-gradient">accelerates business growth</span>
@@ -142,7 +142,7 @@ function HomePage() {
               </motion.div>
 
               {/* tech marquee */}
-              <div className="mt-10 sm:mt-12 relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+              <div className="mt-10 sm:mt-12 relative w-full max-w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
                 <div className="flex gap-8 sm:gap-10 animate-marquee w-max text-[10px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.2em] text-muted-foreground/80">
                   {[...Array(2)].map((_, k) => (
                     <div key={k} className="flex gap-8 sm:gap-10 pr-8 sm:pr-10">
