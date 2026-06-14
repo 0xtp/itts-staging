@@ -156,23 +156,35 @@ function HomePage() {
         </div>
       </section>
 
-      {/* METRICS */}
+      {/* TRUST PILLARS */}
       <section className="relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <Reveal className="glass-strong rounded-3xl p-8 sm:p-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6">
-              {metrics.map((m) => (
-                <div key={m.label} className="text-center md:text-left">
-                  <div className="font-display text-4xl sm:text-5xl font-black text-gradient">
-                    <Counter to={m.value} suffix={m.suffix} />
+          <Reveal className="glass-strong rounded-3xl p-8 sm:p-12 ring-glow">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+              <span className="h-px w-8 bg-gradient-to-r from-violet to-magenta" />
+              How we work
+            </div>
+            <div className="mt-8 grid gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+              {trustPillars.map((p) => (
+                <div key={p.headline} className="relative">
+                  <div className="font-display text-3xl sm:text-4xl font-black text-gradient leading-none">
+                    {p.headline}
+                    {p.sub && (
+                      <span className="ml-1.5 align-baseline font-display text-base sm:text-lg font-bold text-muted-foreground">
+                        {p.sub}
+                      </span>
+                    )}
                   </div>
-                  <div className="mt-2 text-sm text-muted-foreground">{m.label}</div>
+                  <div className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-[26ch]">
+                    {p.label}
+                  </div>
                 </div>
               ))}
             </div>
           </Reveal>
         </div>
       </section>
+
 
       {/* CAPABILITIES */}
       <section className="relative mt-32">
