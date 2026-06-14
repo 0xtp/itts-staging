@@ -84,8 +84,8 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-10 sm:pt-16 pb-24 lg:pb-32">
-          <div className="grid gap-14 lg:grid-cols-12 lg:gap-10 items-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-8 sm:pt-16 pb-16 sm:pb-24 lg:pb-32">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-10 items-center">
             <div className="lg:col-span-7">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
