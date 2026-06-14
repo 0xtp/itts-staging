@@ -181,7 +181,7 @@ function HomePage() {
             </p>
           </Reveal>
 
-          <Stagger className="grid gap-px overflow-hidden rounded-3xl glass-strong ring-glow sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl glass-strong ring-glow lg:grid-cols-4">
             {stats.map((s) => (
               <motion.div
                 variants={item}
