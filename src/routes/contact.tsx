@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 import { z } from "zod";
 import { Reveal, Stagger, item } from "@/components/site/Reveal";
+import { SITE } from "@/lib/site-info";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -156,10 +157,15 @@ function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.1} className="lg:col-span-5 space-y-4">
-            <ContactCard icon={Mail} label="Email" value="hello@itts.com" />
-            <ContactCard icon={Phone} label="Phone" value="+1 (555) 010-2025" />
-            <ContactCard icon={MapPin} label="Office" value={"World Trade Center · 8th Floor"} sub="Global remote teams" />
-            <ContactCard icon={Clock} label="Hours" value="Mon–Fri · 9am – 7pm" sub="24/7 support for active engagements" />
+            <ContactCard icon={Mail} label="Email" value={SITE.email} sub={SITE.emailAlt} href={`mailto:${SITE.email}`} />
+            <ContactCard icon={Phone} label="Phone" value={SITE.phone} sub="Mon – Sat, business hours" href={SITE.phoneHref} />
+            <ContactCard
+              icon={MapPin}
+              label="Office"
+              value={SITE.address.line1}
+              sub={`${SITE.address.line2} · ${SITE.address.line3}`}
+            />
+            <ContactCard icon={Clock} label="Hours" value={SITE.hours} sub="24/7 support for active engagements" />
           </Reveal>
         </div>
       </section>
@@ -218,7 +224,7 @@ function ContactPage() {
               30 minutes. No deck. Sharp questions, honest answers, and a recommendation either way.
             </p>
             <a
-              href="mailto:hello@itts.com"
+              href={`mailto:${SITE.email}`}
               className="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet to-magenta px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/20"
             >
               Reserve a slot <ArrowRight className="h-4 w-4" />
@@ -314,23 +320,32 @@ function ContactCard({
   label,
   value,
   sub,
+  href,
 }: {
   icon: typeof Mail;
   label: string;
   value: string;
   sub?: string;
+  href?: string;
 }) {
-  return (
-    <div className="glass rounded-2xl p-6 flex gap-4">
+  const inner = (
+    <div className="glass rounded-2xl p-6 flex gap-4 hover:bg-white/[0.06] transition">
       <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet to-magenta ring-1 ring-white/15">
         <Icon className="h-5 w-5 text-white" />
       </div>
       <div className="min-w-0">
         <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{label}</div>
-        <div className="mt-1 font-display font-bold truncate">{value}</div>
-        {sub && <div className="mt-0.5 text-xs text-muted-foreground">{sub}</div>}
+        <div className="mt-1 font-display font-bold break-words">{value}</div>
+        {sub && <div className="mt-0.5 text-xs text-muted-foreground break-words">{sub}</div>}
       </div>
     </div>
+  );
+  return href ? (
+    <a href={href} className="block">
+      {inner}
+    </a>
+  ) : (
+    inner
   );
 }
 
