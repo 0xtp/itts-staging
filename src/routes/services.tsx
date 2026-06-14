@@ -54,7 +54,7 @@ const services = [
     eyebrow: "03",
     title: "Mobile Development",
     desc: "Native-quality iOS and Android experiences from a single, maintainable codebase — or fully native when it matters.",
-    tags: ["iOS", "Android", "React Native", "Flutter"],
+    tags: ["iOS", "Android", "React Native", "Apache Cordova"],
     tint: "from-magenta/40 to-cyan/20",
   },
   {

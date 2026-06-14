@@ -34,7 +34,7 @@ const stack = [
   { group: "Cloud", techs: ["AWS", "Azure", "GCP"] },
   { group: "Data", techs: ["PostgreSQL", "MongoDB", "Redis"] },
   { group: "Web3", techs: ["Solidity", "Ethers.js", "Hardhat"] },
-  { group: "Mobile", techs: ["React Native", "Flutter", "Swift"] },
+  { group: "Mobile", techs: ["React Native", "Apache Cordova", "Swift"] },
 ];
 
 function AboutPage() {

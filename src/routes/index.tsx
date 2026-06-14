@@ -146,7 +146,7 @@ function HomePage() {
                 <div className="flex gap-10 animate-marquee w-max text-xs uppercase tracking-[0.2em] text-muted-foreground/80">
                   {[...Array(2)].map((_, k) => (
                     <div key={k} className="flex gap-10 pr-10">
-                      {["React", "Next.js", "Node", "AWS", "Azure", ".NET", "Python", "PostgreSQL", "Solidity", "Flutter", "React Native", "Kubernetes"].map((t) => (
+                      {["React", "Next.js", "Node", "AWS", "Azure", ".NET", "Python", "PostgreSQL", "Solidity", "Apache Cordova", "React Native", "Kubernetes"].map((t) => (
                         <span key={t + k}>{t}</span>
                       ))}
                     </div>
