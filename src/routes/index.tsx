@@ -15,7 +15,6 @@ import {
   Handshake,
 } from "lucide-react";
 import { HeroVisual } from "@/components/site/HeroVisual";
-import { Counter } from "@/components/site/Counter";
 import { Reveal, Stagger, item } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
@@ -46,11 +45,24 @@ const capabilities = [
   { icon: Palette, title: "Product Design", desc: "Research-driven UX, design systems and rapid prototyping.", tint: "from-magenta to-violet" },
 ];
 
-const metrics = [
-  { value: 100, suffix: "+", label: "Projects delivered" },
-  { value: 10, suffix: "+", label: "Years of engineering" },
-  { value: 95, suffix: "%", label: "Client retention" },
-  { value: 24, suffix: "/7", label: "Always-on support" },
+const trustPillars = [
+  {
+    headline: "16+",
+    sub: "yrs",
+    label: "Combined engineering experience across the founding team.",
+  },
+  {
+    headline: "Senior-led",
+    label: "Every engagement is led and built by senior engineers — no offshoring layers.",
+  },
+  {
+    headline: "1 business day",
+    label: "Typical response time on project inquiries, with a concrete next step.",
+  },
+  {
+    headline: "Hyderabad, India",
+    label: "Headquartered in Telangana · delivering for clients across India and abroad.",
+  },
 ];
 
 const reasons = [
@@ -75,9 +87,9 @@ function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-muted-foreground">Now booking Q1 engagements</span>
+                <span className="text-muted-foreground">Now booking new engagements</span>
                 <span className="text-foreground/40">·</span>
-                <span className="text-foreground/80">Global remote teams</span>
+                <span className="text-foreground/80">Hyderabad · Remote-friendly</span>
               </motion.div>
 
               <motion.h1
@@ -143,23 +155,35 @@ function HomePage() {
         </div>
       </section>
 
-      {/* METRICS */}
+      {/* TRUST PILLARS */}
       <section className="relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <Reveal className="glass-strong rounded-3xl p-8 sm:p-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6">
-              {metrics.map((m) => (
-                <div key={m.label} className="text-center md:text-left">
-                  <div className="font-display text-4xl sm:text-5xl font-black text-gradient">
-                    <Counter to={m.value} suffix={m.suffix} />
+          <Reveal className="glass-strong rounded-3xl p-8 sm:p-12 ring-glow">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+              <span className="h-px w-8 bg-gradient-to-r from-violet to-magenta" />
+              How we work
+            </div>
+            <div className="mt-8 grid gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+              {trustPillars.map((p) => (
+                <div key={p.headline} className="relative">
+                  <div className="font-display text-3xl sm:text-4xl font-black text-gradient leading-none">
+                    {p.headline}
+                    {p.sub && (
+                      <span className="ml-1.5 align-baseline font-display text-base sm:text-lg font-bold text-muted-foreground">
+                        {p.sub}
+                      </span>
+                    )}
                   </div>
-                  <div className="mt-2 text-sm text-muted-foreground">{m.label}</div>
+                  <div className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-[26ch]">
+                    {p.label}
+                  </div>
                 </div>
               ))}
             </div>
           </Reveal>
         </div>
       </section>
+
 
       {/* CAPABILITIES */}
       <section className="relative mt-32">
@@ -195,10 +219,13 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Featured work</div>
+              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">What we build</div>
               <h2 className="mt-4 font-display text-4xl sm:text-5xl font-black tracking-tight max-w-2xl">
-                Selected platforms shipped with our partners.
+                The kind of platforms we engineer with our partners.
               </h2>
+              <p className="mt-4 max-w-xl text-sm text-muted-foreground">
+                Illustrative reference architectures based on real work — published case studies coming soon.
+              </p>
             </div>
             <Link to="/services" className="text-sm text-foreground/80 hover:text-foreground inline-flex items-center gap-1">
               All services <ArrowUpRight className="h-4 w-4" />
@@ -208,22 +235,22 @@ function HomePage() {
           <Stagger className="mt-12 grid gap-6 lg:grid-cols-3">
             <CaseCard
               tag="Enterprise · SaaS"
-              title="Enterprise Portal"
-              desc="Unified ops portal for a Fortune 500 retailer — 14 systems, one interface."
+              title="Operations Portal"
+              desc="Unified internal portal that consolidates fragmented back-office tools into one secure interface."
               gradient="from-violet/40 via-magenta/30 to-transparent"
               mock={<PortalMock />}
             />
             <CaseCard
               tag="Fintech"
-              title="Fintech Platform"
-              desc="Regulated payments and ledgering platform processing $2.4B annually."
+              title="Payments & Ledger"
+              desc="Compliance-aware payments and double-entry ledger services, built for audit and scale."
               gradient="from-cyan/40 via-violet/30 to-transparent"
               mock={<FintechMock />}
             />
             <CaseCard
               tag="AI · Operations"
-              title="AI Operations Dashboard"
-              desc="LLM-powered observability copilot reducing MTTR by 62%."
+              title="AI Operations Copilot"
+              desc="LLM-powered assistant that reads logs and metrics to help on-call engineers triage incidents faster."
               gradient="from-magenta/40 via-cyan/30 to-transparent"
               mock={<AIMock />}
             />

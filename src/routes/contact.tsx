@@ -165,7 +165,7 @@ function ContactPage() {
               value={SITE.address.line1}
               sub={`${SITE.address.line2} · ${SITE.address.line3}`}
             />
-            <ContactCard icon={Clock} label="Hours" value={SITE.hours} sub="24/7 support for active engagements" />
+            <ContactCard icon={Clock} label="Hours" value={SITE.hours} sub="Priority support windows for active engagements" />
           </Reveal>
         </div>
       </section>
@@ -202,9 +202,9 @@ function ContactPage() {
               <div className="absolute inset-0 flex items-end p-8">
                 <div className="glass-strong rounded-2xl p-5 max-w-sm">
                   <div className="text-[10px] uppercase tracking-[0.2em] text-cyan">Headquarters</div>
-                  <div className="mt-2 font-display text-xl font-bold">Global · Distributed</div>
+                  <div className="mt-2 font-display text-xl font-bold">Hyderabad, India</div>
                   <p className="mt-1.5 text-sm text-muted-foreground">
-                    Senior engineers across North America, Europe and APAC.
+                    Building from Telangana for clients across India and abroad. Remote-friendly delivery.
                   </p>
                 </div>
               </div>

@@ -64,7 +64,7 @@ const pillars = [
     title: "Software that keeps working — quietly.",
     desc: "What happens after launch defines the product. We're built for that part too.",
     items: [
-      { icon: HeadphonesIcon, title: "24/7 support", desc: "Follow-the-sun engineers on call for critical systems." },
+      { icon: HeadphonesIcon, title: "Priority support", desc: "Dedicated support windows and on-call coverage for active engagements." },
       { icon: Activity, title: "Monitoring", desc: "End-to-end observability, SLOs and proactive alerting." },
       { icon: Wrench, title: "Maintenance", desc: "Dependency hygiene, patching and tech-debt budgets." },
       { icon: RefreshCw, title: "Continuous improvement", desc: "Every quarter raises a measurable bar." },
