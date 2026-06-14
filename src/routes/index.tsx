@@ -103,7 +103,7 @@ function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.05 }}
-                className="mt-6 font-display text-[2.6rem] sm:text-6xl lg:text-[5rem] leading-[1.02] font-black tracking-tight"
+                className="mt-6 font-display text-[2.1rem] sm:text-5xl md:text-6xl lg:text-[5rem] leading-[1.05] font-black tracking-tight"
               >
                 Engineering technology that{" "}
                 <span className="text-gradient">accelerates business growth</span>
