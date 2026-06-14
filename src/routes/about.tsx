@@ -45,7 +45,7 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-24">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">About ITTS</div>
-            <h1 className="mt-4 font-display text-5xl sm:text-7xl lg:text-[6.5rem] font-black tracking-tight leading-[1.02] max-w-5xl">
+            <h1 className="mt-4 font-display text-[2.25rem] sm:text-6xl md:text-7xl lg:text-[6rem] font-black tracking-tight leading-[1.02] max-w-5xl">
               Building digital solutions <span className="text-gradient">with trust.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg sm:text-xl text-muted-foreground">
