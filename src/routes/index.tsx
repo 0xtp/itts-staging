@@ -45,23 +45,30 @@ const capabilities = [
   { icon: Palette, title: "Product Design", desc: "Research-driven UX, design systems and rapid prototyping.", tint: "from-magenta to-violet" },
 ];
 
-const trustPillars = [
+const stats = [
   {
-    headline: "16+",
-    sub: "yrs",
-    label: "Combined engineering experience across the founding team.",
+    value: "16",
+    unit: "+ yrs",
+    title: "Engineering experience",
+    desc: "Combined across the founding and lead engineering team.",
   },
   {
-    headline: "Senior-led",
-    label: "Every engagement is led and built by senior engineers — no offshoring layers.",
+    value: "100",
+    unit: "%",
+    title: "Senior-led delivery",
+    desc: "Every line of production code reviewed by senior engineers.",
   },
   {
-    headline: "1 business day",
-    label: "Typical response time on project inquiries, with a concrete next step.",
+    value: "30",
+    unit: "%",
+    title: "Faster shipping",
+    desc: "Typical sprint output vs. legacy agency timelines on comparable scope.",
   },
   {
-    headline: "Hyderabad, India",
-    label: "Headquartered in Telangana · delivering for clients across India and abroad.",
+    value: "<24",
+    unit: "hrs",
+    title: "Inquiry response",
+    desc: "From first message to a concrete next step on your project.",
   },
 ];
 
@@ -155,34 +162,51 @@ function HomePage() {
         </div>
       </section>
 
-      {/* TRUST PILLARS */}
+      {/* STATS */}
       <section className="relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <Reveal className="glass-strong rounded-3xl p-8 sm:p-12 ring-glow">
-            <div className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-              <span className="h-px w-8 bg-gradient-to-r from-violet to-magenta" />
-              How we work
+          <Reveal className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+            <div>
+              <div className="flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+                <span className="h-px w-8 bg-gradient-to-r from-violet to-magenta" />
+                By the numbers
+              </div>
+              <h2 className="mt-4 font-display text-3xl sm:text-4xl font-black tracking-tight max-w-2xl">
+                Honest metrics from a focused engineering team.
+              </h2>
             </div>
-            <div className="mt-8 grid gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
-              {trustPillars.map((p) => (
-                <div key={p.headline} className="relative">
-                  <div className="font-display text-3xl sm:text-4xl font-black text-gradient leading-none">
-                    {p.headline}
-                    {p.sub && (
-                      <span className="ml-1.5 align-baseline font-display text-base sm:text-lg font-bold text-muted-foreground">
-                        {p.sub}
-                      </span>
-                    )}
-                  </div>
-                  <div className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-[26ch]">
-                    {p.label}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p className="text-sm text-muted-foreground max-w-sm">
+              We're early-stage on purpose — small, senior, and accountable. The numbers below reflect how we
+              actually work, not how a sales deck would frame it.
+            </p>
           </Reveal>
+
+          <Stagger className="grid gap-px overflow-hidden rounded-3xl glass-strong ring-glow sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((s) => (
+              <motion.div
+                variants={item}
+                key={s.title}
+                className="relative bg-background/40 px-7 py-8 hover:bg-white/[0.03] transition"
+              >
+                <div className="flex items-baseline gap-1.5">
+                  <span className="font-display text-5xl sm:text-6xl font-black text-gradient tabular-nums leading-none">
+                    {s.value}
+                  </span>
+                  <span className="font-display text-base sm:text-lg font-bold text-foreground/70 tabular-nums">
+                    {s.unit}
+                  </span>
+                </div>
+                <div className="mt-5 h-px w-10 bg-gradient-to-r from-violet/70 to-transparent" />
+                <div className="mt-5 font-display text-[15px] font-bold text-foreground">
+                  {s.title}
+                </div>
+                <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+              </motion.div>
+            ))}
+          </Stagger>
         </div>
       </section>
+
 
 
       {/* CAPABILITIES */}
