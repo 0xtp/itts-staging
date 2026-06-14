@@ -5,7 +5,6 @@ export const SITE = {
   phone: "+91 9063 140 680",
   phoneHref: "tel:+919063140680",
   email: "info@ittsols.com",
-  emailAlt: "itrusttechnosolutions@gmail.com",
   hours: "Mon – Sat · 09:00 – 18:00 IST",
   address: {
     line1: "Plot No. 492, Secretariat Hills",
