@@ -35,18 +35,10 @@ export function Header() {
             scrolled ? "glass-strong shadow-[0_8px_40px_-12px_rgba(0,0,0,0.5)]" : "bg-transparent"
           }`}
         >
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet to-magenta ring-1 ring-white/15">
-              <span className="font-display text-sm font-black text-white">IT</span>
-              <span className="absolute -inset-1 rounded-xl bg-violet/30 blur-lg opacity-60 group-hover:opacity-100 transition" />
-            </span>
-            <div className="leading-tight">
-              <div className="font-display text-[15px] font-bold tracking-tight">ITTS</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                Trust · Techno
-              </div>
-            </div>
+          <Link to="/" className="group">
+            <Logo />
           </Link>
+
 
           <nav className="hidden lg:flex items-center gap-1">
             {nav.map((n) => (
