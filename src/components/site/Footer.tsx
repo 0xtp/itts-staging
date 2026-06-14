@@ -23,7 +23,7 @@ export function Footer() {
             </Link>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-8">
             <FooterCol
               title="Company"
               links={[
@@ -42,15 +42,15 @@ export function Footer() {
                 { to: "/services", label: "Blockchain" },
               ]}
             />
-            <div>
+            <div className="col-span-2">
               <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Contact</div>
-              <ul className="mt-5 space-y-3 text-sm">
+              <ul className="mt-5 space-y-2.5 text-[13px] leading-relaxed">
                 <li>
                   <a
                     href={`mailto:${SITE.email}`}
                     className="inline-flex items-center gap-2 text-foreground/90 hover:text-foreground"
                   >
-                    <Mail className="h-3.5 w-3.5 text-cyan" /> {SITE.email}
+                    <Mail className="h-3.5 w-3.5 text-cyan shrink-0" /> {SITE.email}
                   </a>
                 </li>
                 <li>
@@ -58,7 +58,7 @@ export function Footer() {
                     href={SITE.phoneHref}
                     className="inline-flex items-center gap-2 text-foreground/90 hover:text-foreground"
                   >
-                    <Phone className="h-3.5 w-3.5 text-cyan" /> {SITE.phone}
+                    <Phone className="h-3.5 w-3.5 text-cyan shrink-0" /> {SITE.phone}
                   </a>
                 </li>
                 <li className="flex items-start gap-2 text-muted-foreground">
@@ -68,7 +68,7 @@ export function Footer() {
                   </span>
                 </li>
                 <li className="inline-flex items-center gap-2 text-muted-foreground">
-                  <Clock className="h-3.5 w-3.5 text-cyan" /> {SITE.hours}
+                  <Clock className="h-3.5 w-3.5 text-cyan shrink-0" /> {SITE.hours}
                 </li>
               </ul>
             </div>
