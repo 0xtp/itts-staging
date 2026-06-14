@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 import { z } from "zod";
 import { Reveal, Stagger, item } from "@/components/site/Reveal";
+import { SITE } from "@/lib/site-info";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
