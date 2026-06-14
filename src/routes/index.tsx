@@ -155,7 +155,7 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5">
+            <div className="hidden md:block lg:col-span-5">
               <HeroVisual />
             </div>
           </div>
