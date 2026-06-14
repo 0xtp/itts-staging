@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Logo } from "@/components/site/Logo";
+import { SITE } from "@/lib/site-info";
 
 export function Footer() {
   return (
@@ -8,14 +10,10 @@ export function Footer() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-2.5">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet to-magenta ring-1 ring-white/15">
-                <span className="font-display text-sm font-black text-white">IT</span>
-              </span>
-              <span className="font-display text-lg font-bold">ITTS</span>
-            </div>
+            <Logo />
             <p className="mt-6 max-w-md text-balance text-lg text-muted-foreground">
-              Engineering technology that accelerates business growth — from custom platforms to AI, cloud and Web3.
+              Engineering technology that accelerates business growth — from custom platforms to AI,
+              cloud and Web3. Building Solutions With Trust.
             </p>
             <Link
               to="/contact"
@@ -47,9 +45,31 @@ export function Footer() {
             <div>
               <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Contact</div>
               <ul className="mt-5 space-y-3 text-sm">
-                <li className="text-foreground/90">hello@itts.com</li>
-                <li className="text-foreground/90">+1 (555) 010-2025</li>
-                <li className="text-muted-foreground">Mon–Fri · 24/7 Support</li>
+                <li>
+                  <a
+                    href={`mailto:${SITE.email}`}
+                    className="inline-flex items-center gap-2 text-foreground/90 hover:text-foreground"
+                  >
+                    <Mail className="h-3.5 w-3.5 text-cyan" /> {SITE.email}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={SITE.phoneHref}
+                    className="inline-flex items-center gap-2 text-foreground/90 hover:text-foreground"
+                  >
+                    <Phone className="h-3.5 w-3.5 text-cyan" /> {SITE.phone}
+                  </a>
+                </li>
+                <li className="flex items-start gap-2 text-muted-foreground">
+                  <MapPin className="h-3.5 w-3.5 text-cyan mt-0.5 shrink-0" />
+                  <span>
+                    {SITE.address.line1}, {SITE.address.line2}, {SITE.address.line3}
+                  </span>
+                </li>
+                <li className="inline-flex items-center gap-2 text-muted-foreground">
+                  <Clock className="h-3.5 w-3.5 text-cyan" /> {SITE.hours}
+                </li>
               </ul>
             </div>
           </div>
