@@ -87,9 +87,9 @@ function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-muted-foreground">Now booking Q1 engagements</span>
+                <span className="text-muted-foreground">Now booking new engagements</span>
                 <span className="text-foreground/40">·</span>
-                <span className="text-foreground/80">Global remote teams</span>
+                <span className="text-foreground/80">Hyderabad · Remote-friendly</span>
               </motion.div>
 
               <motion.h1
