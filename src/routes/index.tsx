@@ -45,23 +45,30 @@ const capabilities = [
   { icon: Palette, title: "Product Design", desc: "Research-driven UX, design systems and rapid prototyping.", tint: "from-magenta to-violet" },
 ];
 
-const trustPillars = [
+const stats = [
   {
-    headline: "16+",
-    sub: "yrs",
-    label: "Combined engineering experience across the founding team.",
+    value: "16",
+    unit: "+ yrs",
+    title: "Engineering experience",
+    desc: "Combined across the founding and lead engineering team.",
   },
   {
-    headline: "Senior-led",
-    label: "Every engagement is led and built by senior engineers — no offshoring layers.",
+    value: "100",
+    unit: "%",
+    title: "Senior-led delivery",
+    desc: "Every line of production code reviewed by senior engineers.",
   },
   {
-    headline: "1 business day",
-    label: "Typical response time on project inquiries, with a concrete next step.",
+    value: "30",
+    unit: "%",
+    title: "Faster shipping",
+    desc: "Typical sprint output vs. legacy agency timelines on comparable scope.",
   },
   {
-    headline: "Hyderabad, India",
-    label: "Headquartered in Telangana · delivering for clients across India and abroad.",
+    value: "<24",
+    unit: "hrs",
+    title: "Inquiry response",
+    desc: "From first message to a concrete next step on your project.",
   },
 ];
 
