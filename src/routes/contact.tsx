@@ -157,10 +157,15 @@ function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.1} className="lg:col-span-5 space-y-4">
-            <ContactCard icon={Mail} label="Email" value="hello@itts.com" />
-            <ContactCard icon={Phone} label="Phone" value="+1 (555) 010-2025" />
-            <ContactCard icon={MapPin} label="Office" value={"World Trade Center · 8th Floor"} sub="Global remote teams" />
-            <ContactCard icon={Clock} label="Hours" value="Mon–Fri · 9am – 7pm" sub="24/7 support for active engagements" />
+            <ContactCard icon={Mail} label="Email" value={SITE.email} sub={SITE.emailAlt} href={`mailto:${SITE.email}`} />
+            <ContactCard icon={Phone} label="Phone" value={SITE.phone} sub="Mon – Sat, business hours" href={SITE.phoneHref} />
+            <ContactCard
+              icon={MapPin}
+              label="Office"
+              value={SITE.address.line1}
+              sub={`${SITE.address.line2} · ${SITE.address.line3}`}
+            />
+            <ContactCard icon={Clock} label="Hours" value={SITE.hours} sub="24/7 support for active engagements" />
           </Reveal>
         </div>
       </section>
