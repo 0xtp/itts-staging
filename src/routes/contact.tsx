@@ -76,7 +76,7 @@ function ContactPage() {
     <>
       {/* HERO */}
       <section className="relative">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-24">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Contact</div>
             <h1 className="mt-4 font-display text-[2.25rem] sm:text-6xl md:text-7xl lg:text-[6rem] font-black tracking-tight leading-[1.02] max-w-5xl">
