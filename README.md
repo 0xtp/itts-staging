@@ -62,7 +62,7 @@ Create `/etc/nginx/sites-available/itts`:
 ```nginx
 server {
     listen 80;
-    server_name your-domain.com www.your-domain.com;
+    server_name ittsols.com www.ittsols.com;
 
     location / {
         proxy_pass http://127.0.0.1:3000;
@@ -88,7 +88,7 @@ sudo systemctl reload nginx
 
 ```bash
 sudo apt install -y certbot python3-certbot-nginx
-sudo certbot --nginx -d your-domain.com -d www.your-domain.com
+sudo certbot --nginx -d ittsols.com -d www.ittsols.com
 ```
 
 Certbot installs an auto-renew timer. Verify with `sudo certbot renew --dry-run`.
